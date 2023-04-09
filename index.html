@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Container with Button</title>
+	<style>
+		body {
+			background-color: #333;
+			font-family: Arial, sans-serif;
+			color: #fff;
+			margin: 0;
+			padding: 0;
+		}
+		.outer-container {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			background-color: #1e1e1e;
+			animation: gradient 15s ease infinite;
+		}
+		@keyframes gradient {
+			0% {
+				background-color: #1e1e1e;
+			}
+			50% {
+				background-color: #444;
+			}
+			100% {
+				background-color: #1e1e1e;
+			}
+		}
+		.inner-container {
+			width: 400px;
+			height: 200px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			background-color: #444;
+			padding: 10px;
+			border-radius: 10px;
+			box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+			animation: pulse 2s ease infinite;
+		}
+		@keyframes pulse {
+			0% {
+				transform: scale(1);
+			}
+			50% {
+				transform: scale(1.05);
+			}
+			100% {
+				transform: scale(1);
+			}
+		}
+		h1 {
+			font-size: 36px;
+			margin: 0 0 10px 0;
+			color: #fff;
+			text-shadow: 2px 2px #333;
+		}
+		h3 {
+			font-size: 20px;
+			margin: 0 0 30px 0;
+			color: #ff69b4;
+			animation: color-change 5s ease infinite;
+		}
+		@keyframes color-change {
+			0% {
+				color: #ff69b4;
+			}
+			50% {
+				color: #f4a7b9;
+			}
+			100% {
+				color: #ff69b4;
+			}
+		}
+		
+		.button {
+			padding: 10px 20px;
+			background-color: #ff69b4;
+			color: #fff;
+			border: none;
+			border-radius: 25px;
+			font-size: 16px;
+			cursor: pointer;
+			box-shadow: 2px 2px #333;
+			transition: all 0.3s ease;
+		}
+		.button:hover {
+			background-color: #f4a7b9;
+			transform: translateY(-5px);
+			box-shadow: 4px 4px #333;
+		}
+		.button:active {
+			box-shadow: 1px 1px #333;
+			transform: scale(0.95);
+		}
+	</style>
+</head>
+<body>
+	<div class="outer-container">
+		<div class="inner-container">
+			<h1>Need a Laugh?</h1>
+			<h3 id="joke">These silly jokes can make your day:)</h3>
+            <button id="jokeBtn" class="button">Click here </button>
+		</div>
+	</div>
+    <script src="joke.js"></script>
+</body>
+</html>
